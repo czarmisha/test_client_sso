@@ -128,7 +128,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/login/'
 
 # Specify SSO server base url
-SSO_ROOT = 'http://127.0.0.1:8000'
+SSO_ROOT = 'http://agroportal.track.uz/'
 
 # Specify application token obtained in SSO server in the admin panel
-SSO_TOKEN = 'rbqSzSgtTbYDoIuN9vEDZbNrEFgoxk44EnKZqGgYeKI6sjf86qozb1n5i6ZOZmlfnF7QetTwbQINajvsPQlTbjy3KK28LKiNcecDEFAMWyuYFvdW82Zhs5Uw0lZofpFw'
+SSO_TOKEN = 'En73jiXoYDMIDp61zsaLfwxaGUkHXkIh4hflf48F624AQDrS4svnpIqCWabPAShMp92SYpA8TrKB7NgYgGmmJUY7f2PZHvsIrU30QZQJ6uMBIWFhPYHJ5P2GHr978xRG'
+
+# Base url to serve media files
+MEDIA_URL = '/media/'
+
+# Path where media is stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static/"),
+)

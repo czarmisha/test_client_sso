@@ -15,8 +15,7 @@ def request_sso_authorization_request(request) -> str:
     try:
         result = requests.post(settings.SSO_ROOT.rstrip('/') + '/sso/obtain/', {
             "token": settings.SSO_TOKEN,
-            "next_url": '/success/',
-            # "next_url": request.GET.get('next', '/'),
+            "next_url": request.GET.get('next', '/'),
         })
 
         if result.status_code != 200:
